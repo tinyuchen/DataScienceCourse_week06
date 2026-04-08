@@ -11,7 +11,7 @@
 - GitHub Repo：https://github.com/tinyuchen/DataScienceCourse_week06
 - GitHub Pages（網站）：https://tinyuchen.github.io/DataScienceCourse_week06/
 - PWA 安裝（同 Pages）：https://tinyuchen.github.io/DataScienceCourse_week06/
-- APK 下載位置：【貼上 APK 下載連結（建議放 GitHub Release 或 Google Drive）】
+- APK 下載位置：https://github.com/tinyuchen/DataScienceCourse_week06/releases/tag/ver0
 
 ---
 
