@@ -10,7 +10,7 @@
 ## 2. 展示連結（必填）
 - GitHub Repo：https://github.com/tinyuchen/DataScienceCourse_week06
 - GitHub Pages（網站）：https://tinyuchen.github.io/DataScienceCourse_week06/
-- PWA 安裝（同 Pages）：https://tinyuchen.github.io/DataScienceCourse_week06/
+- PWA 安裝：https://tinyuchen.github.io/DataScienceCourse_week06/
 - APK 下載位置：https://github.com/tinyuchen/DataScienceCourse_week06/releases/tag/ver0
 
 ---
