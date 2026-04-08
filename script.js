@@ -1,3 +1,19 @@
+async function loadProductsFromJson() {
+  const res = await fetch("data/products.json", { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load data/products.json");
+  const j = await res.json();
+
+  // 只取 active=1
+  return (j.products || []).filter(p => Number(p.active) === 1).map(p => ({
+    id: p.id,
+    emoji: "🎀",
+    name: { zh: p.name_zh, ja: p.name_ja, en: p.name_en },
+    price: Number(p.price),
+    desc: { zh: p.desc_zh, ja: p.desc_ja, en: p.desc_en },
+    image_url: p.image_url || ""
+  }));
+}
+
 const $ = (id) => document.getElementById(id);
 
 const products = [
@@ -113,14 +129,27 @@ function applyI18n() {
   });
 }
 
-function renderProducts() {
-  const grid = $("productGrid");
+let products = []; // 改成空陣列，資料改由 JSON 讀
+
+async function renderProducts() {
+  const grid = document.getElementById("productGrid");
   grid.innerHTML = "";
+
+  if (!products.length) {
+    grid.innerHTML = `<div class="muted">Loading products...</div>`;
+    return;
+  }
+
   products.forEach(p => {
     const card = document.createElement("article");
     card.className = "product";
+
+    const imgHtml = p.image_url
+      ? `<img src="${p.image_url}" alt="${p.name[lang] || p.name.zh}" style="width:100%;height:140px;object-fit:cover;border-radius:16px;border:1px solid var(--line);" />`
+      : `<div class="product__img" aria-hidden="true">${p.emoji}</div>`;
+
     card.innerHTML = `
-      <div class="product__img" aria-hidden="true">${p.emoji}</div>
+      ${imgHtml}
       <div class="product__name">${p.name[lang] || p.name.zh}</div>
       <div class="product__desc">${p.desc[lang] || p.desc.zh}</div>
       <div class="product__row">
@@ -194,7 +223,7 @@ function closeDrawer() {
   $("drawer").setAttribute("aria-hidden", "true");
 }
 
-function init() {
+async function init() {
   $("year").textContent = new Date().getFullYear();
 
   // mobile menu
@@ -234,6 +263,8 @@ function init() {
       "3) 串接物流與訂單管理\n"
     );
   });
+
+  products = await loadProductsFromJson();
 
   applyI18n();
   renderProducts();
