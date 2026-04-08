@@ -7,7 +7,7 @@
 
 ---
 
-## 2. 展示連結（必填）
+## 2. 展示連結
 - GitHub Repo：https://github.com/tinyuchen/DataScienceCourse_week06
 - GitHub Pages（網站）：https://tinyuchen.github.io/DataScienceCourse_week06/
 - PWA 安裝：https://tinyuchen.github.io/DataScienceCourse_week06/
@@ -32,16 +32,27 @@
 
 ## 4. 專案結構
 /index.html
+
 /styles.css
+
 /script.js
+
 /manifest.webmanifest
+
 /service-worker.js
+
 /data/products.json
+
 /scripts/sync_products.py
+
 /.github/workflows/sync_products.yml
+
 /assets/icons/icon-192.png
+
 /assets/icons/icon-512.png
+
 /assets/screenshots/screen1.png
+
 /assets/screenshots/screen2.png
 
 ---
