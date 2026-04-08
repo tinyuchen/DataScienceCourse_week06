@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sakura Beige Closet｜日系衣物線上選物</title>
+  <meta name="description" content="粉色×米白可愛風日系衣物。支援手機版、可切換多國語言，提供購物車與結帳引導。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Sakura Beige Closet">
+        <span class="brand__mark">🎀</span>
+        <span class="brand__name">Sakura Beige Closet</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#products" data-i18n="nav_products">商品</a>
+        <a href="#about" data-i18n="nav_about">關於我們</a>
+        <a href="#faq" data-i18n="nav_faq">常見問題</a>
+        <a href="#contact" data-i18n="nav_contact">聯絡</a>
+      </nav>
+
+      <div class="actions">
+        <select id="lang" class="lang" aria-label="Language">
+          <option value="zh">繁體中文</option>
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+        </select>
+
+        <button class="iconbtn" id="cartBtn" aria-label="Cart">
+          🛒 <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__card">
+        <p class="pill" data-i18n="hero_pill">粉色×米白｜可愛日系穿搭</p>
+        <h1 data-i18n="hero_title">把日常穿成溫柔的樣子</h1>
+        <p class="hero__sub" data-i18n="hero_sub">
+          線上選物店（目前無實體店面），支援手機版瀏覽、可切換多語系，未來可擴充海外銷售。
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" href="#products" data-i18n="hero_cta_primary">逛逛新品</a>
+          <a class="btn btn--ghost" href="#faq" data-i18n="hero_cta_secondary">了解結帳方式</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__k" data-i18n="stat_ship_k">出貨</div>
+            <div class="stat__v" data-i18n="stat_ship_v">台灣宅配/超取</div>
+          </div>
+          <div class="stat">
+            <div class="stat__k" data-i18n="stat_style_k">風格</div>
+            <div class="stat__v" data-i18n="stat_style_v">日系甜美可愛</div>
+          </div>
+          <div class="stat">
+            <div class="stat__k" data-i18n="stat_support_k">支援</div>
+            <div class="stat__v" data-i18n="stat_support_v">多語＋可擴充金流</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <div class="cardArt">
+          <div class="cardArt__tag">NEW</div>
+          <div class="cardArt__title">Sakura Set</div>
+          <div class="cardArt__desc">Creamy beige × blush pink</div>
+          <div class="cardArt__chips">
+            <span class="chip">Soft</span>
+            <span class="chip">Kawaii</span>
+            <span class="chip">RWD</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section">
+      <div class="section__head">
+        <h2 data-i18n="products_title">精選商品</h2>
+        <p class="muted" data-i18n="products_sub">示範商品卡片（可替換為真實商品與照片）。</p>
+      </div>
+
+      <div class="grid" id="productGrid">
+        <!-- JS 會插入商品卡 -->
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section card">
+      <h2 data-i18n="about_title">關於我們</h2>
+      <p data-i18n="about_p1">
+        我們是日系衣物線上選物品牌，主打粉色與米白的溫柔可愛風格。現階段沒有實體店面，專注於線上體驗與服務。
+      </p>
+      <p class="muted" data-i18n="about_p2">
+        （作業提醒：公開網站不建議直接放客戶手機/私人信箱；可改用聯絡表單或商用信箱。）
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="section__head">
+        <h2 data-i18n="faq_title">常見問題（客戶提問）</h2>
+        <p class="muted" data-i18n="faq_sub">把客戶問題用「可執行方案」回答，並可做成回報內容。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary data-i18n="faq_domain_q">Q：網址可以用我自己的名稱嗎？要選哪一種網址？</summary>
+          <div class="faq__a" data-i18n="faq_domain_a">
+            可以。建議用品牌/姓名的「好記」拼法作為網域（例如 sakurabeigecloset.com 或 tingyucloset.com）。
+            若以台灣為主可加買 .tw；若要海外銷售優先 .com 或 .shop。可同時買多個網域，統一導向主站。
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq_host_q">Q：主機放國外會對國外排名更好嗎？</summary>
+          <div class="faq__a" data-i18n="faq_host_a">
+            主機地點不是「直接加分排名」的關鍵。更重要的是：網站速度、內容品質、語言/地區設定（hreflang）、外部連結與使用者體驗。
+            若未來要同時服務台灣與海外，建議使用 CDN（如 Cloudflare）搭配穩定主機，讓海外也能快速載入。
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq_rank_q">Q：我想排名到第一頁，要買廣告嗎？</summary>
+          <div class="faq__a" data-i18n="faq_rank_a">
+            SEO（自然排名）需要時間與內容經營；廣告（Google/Meta）能快速帶流量，但不等於自然排名第一。
+            最實務做法：短期用小額廣告測試熱賣品＋關鍵字；長期做 SEO（商品頁標題、描述、部落格內容、內外部連結、結構化資料）。
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq_pay_q">Q：要怎麼讓客戶在網路上結帳？</summary>
+          <div class="faq__a" data-i18n="faq_pay_a">
+            最快上線：用 Shopify / WooCommerce 這類電商系統，直接具備購物車、金流、物流、訂單管理。
+            台灣常用金流：綠界/藍新；海外可用 Stripe/PayPal。若只做形象站，可先做「下單表單＋轉帳/LINE」過渡，之後再升級正式金流。
+          </div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq_lang_q">Q：可以做多國語言嗎？</summary>
+          <div class="faq__a" data-i18n="faq_lang_a">
+            可以。本頁面已示範語言切換（中文/日文/英文）。正式上線建議每種語言都有獨立網址或路徑（/en /ja），並設定 hreflang，避免搜尋引擎誤判語系。
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section card">
+      <h2 data-i18n="contact_title">聯絡我們</h2>
+      <p class="muted" data-i18n="contact_sub">
+        示範聯絡表單：你可以改成串接 EmailJS、Google Form 或後端 API。
+      </p>
+
+      <form class="form" onsubmit="return false;">
+        <label>
+          <span data-i18n="contact_name">姓名</span>
+          <input type="text" placeholder="Your name" />
+        </label>
+        <label>
+          <span data-i18n="contact_email">Email</span>
+          <input type="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          <span data-i18n="contact_msg">留言</span>
+          <textarea rows="4" placeholder="想詢問的內容..."></textarea>
+        </label>
+        <button class="btn" id="fakeSubmit" data-i18n="contact_send">送出（示範）</button>
+        <p class="muted small" id="submitHint"></p>
+      </form>
+    </section>
+
+    <footer class="footer muted small">
+      <p>© <span id="year"></span> Sakura Beige Closet. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__panel" role="dialog" aria-label="Cart">
+      <div class="drawer__head">
+        <h3 data-i18n="cart_title">購物車</h3>
+        <button class="iconbtn" id="closeDrawer" aria-label="Close">✕</button>
+      </div>
+
+      <div class="drawer__body" id="cartItems"></div>
+
+      <div class="drawer__foot">
+        <div class="row">
+          <span data-i18n="cart_total">小計</span>
+          <b id="cartTotal">$0</b>
+        </div>
+
+        <button class="btn" id="checkoutBtn" data-i18n="cart_checkout">前往結帳（示範）</button>
+        <p class="muted small" data-i18n="cart_note">
+          這是前端示範版。正式結帳建議導入 Shopify/WooCommerce 或串接金流（綠界/藍新/Stripe）。
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
