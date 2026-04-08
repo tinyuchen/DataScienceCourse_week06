@@ -1,0 +1,33 @@
+name: Sync Products from Google Sheet
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # 每 30 分鐘同步一次（可改）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run sync
+        env:
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
+        run: python scripts/sync_products.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/products.json
+          git commit -m "chore: sync products.json" || echo "No changes"
+          git push
