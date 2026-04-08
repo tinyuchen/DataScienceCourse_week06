@@ -1,12 +1,14 @@
 {
   "name": "Sakura Beige Closet",
   "short_name": "SBC",
-  "start_url": ".",
+  "description": "粉色×米白可愛風日系衣物選物。支援 RWD、商品同步更新，並可打包成 Android APK。",
+  "start_url": "/DataScienceCourse_week06/",
+  "scope": "/DataScienceCourse_week06/",
   "display": "standalone",
   "background_color": "#fff7f8",
   "theme_color": "#ffb7c7",
   "icons": [
-    { "src": "https://via.placeholder.com/192.png?text=SBC", "sizes": "192x192", "type": "image/png" },
-    { "src": "https://via.placeholder.com/512.png?text=SBC", "sizes": "512x512", "type": "image/png" }
+    { "src": "/DataScienceCourse_week06/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/DataScienceCourse_week06/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
